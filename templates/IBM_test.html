@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit and Display Information</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #output {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Submit and Display Information</h1>
+    
+    <!-- Create a form for user input -->
+    <form id="infoForm">
+        <label for="inputInfo">Enter Information:</label>
+        <input type="text" id="inputInfo" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <!-- Display the submitted information -->
+    <div id="output">
+        <p>Submitted Information:</p>
+        <p id="displayInfo"></p>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission and display information
+        const infoForm = document.getElementById('infoForm');
+        const inputInfo = document.getElementById('inputInfo');
+        const output = document.getElementById('output');
+        const displayInfo = document.getElementById('displayInfo');
+
+        infoForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting to a server
+
+            const enteredInfo = inputInfo.value;
+
+            // Display the submitted information
+            displayInfo.textContent = enteredInfo;
+            output.style.display = 'block';
+
+            // Clear the input field
+            inputInfo.value = '';
+        });
+    </script>
+</body>
+</html>

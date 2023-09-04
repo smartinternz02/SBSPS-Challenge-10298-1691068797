@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, rgb(251, 30, 58) 50%, #dcdcdc 50%);
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .text-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      width: 60%;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+        .centered-content {
+          position: absolute;
+          top: 80%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          }
+        link-button {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: white;
+          color: black;
+          border: 2px solid black;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s, color 0.3s;
+        }
+
+        .link-button:hover {
+          background-color: black;
+          color: white;
+        }
+  </style>
+</head>
+<body>
+  <div class="text-box">
+    {% if predicted_status %}
+    <h1>CONGRATULATIONS!!</h1>
+    <p>YOU HAVE BEEN PLACED</p>
+    <P><i>Here is your expected salary package</i></P>
+    <p>LOWER BOUND: {{predicted_status["lower_bound"]}} INR</p>
+    <p>UPPER BOUND: {{predicted_status["upper_bound"]}} INR</p>
+    {% else %}
+    <p><strong>Your current performance was not enough to get placed</strong></p>
+    <p>Need to improve your skills</p>
+    <p><strong>Could increase chances by working on more interships</strong></p>
+    {% endif %}
+    </div>
+    <div class = "centered-content">
+    <a href= "http://127.0.0.1:5000" class= "link-button" ><strong>PREDICT AGAIN</strong></a>
+    </div>
+
+</body>
+</html>
+

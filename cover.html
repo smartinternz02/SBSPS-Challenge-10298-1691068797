@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .background-container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .left-side {
+      flex: 1;
+      background-color: #e74c3c;
+      padding: 20px;
+      color: white;
+    }
+
+    .right-side {
+      flex: 1;
+      background-color: #dcdcdc;
+      padding: 20px;
+      color: white;
+    }
+
+    .centered-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      
+      .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    .link-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .link-button:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-container">
+    <div class="left-side">
+       <div class="image-container"> 
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1YzofOvKttLTgcVsRQnQHs6P5a27OwmoAVQ&usqp=CAU" alt="Image" width="100" height="100">
+       
+      </div> 
+    </div>
+    <div class="right-side">
+    </div>
+    <div class="centered-content">
+      <h1>PLACEMENT PREDICTION</h1>
+      <p><strong>TEAM VALHALA</strong></p>
+    <div>
+    <a href=  "http://127.0.0.1:5000" class="link-button"><strong>PREDICT MY PLACEMENT</strong></a>
+  </div>
+  </div>
+</body>
+</html>
+

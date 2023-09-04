@@ -1,0 +1,35 @@
+{% extends "IBM_layout.html" %}
+{% block content %}
+<!--<main role="main" class="container">-->
+    <form action = "/result" method = "POST">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8 content-section">
+              <label for="age"><strong>Enter your Age:</strong></label><br>
+              <input type="number" id="age" name="age" required /><br><br>
+              
+              <label for="ssc_p"><strong>Percentage secured on completion of Senior Secondary:</strong></label><br>
+              <input type="text" id="ssc_p" name="ssc_p" required /><br><br>
+              
+              <label for="hsc_p"><strong>Percentage secured on completion of Higher Secondary:</strong></label><br>
+              <input type="text" id="hsc_p" name="hsc_p" required /><br><br>
+              
+              <label for="degree_p"><strong>Percentage secured on completion of degree:</strong></label><br>
+              <input type="text" id="degree_p" name="degree_p" required /><br><br>
+              
+              <label for="workex"><strong>Years of work Experience:</strong></label><br>
+              <input type="number" id="workex" name="workex" required /><br><br>
+              
+              <label for="etest_p"><strong>Percentage secured in Entrance Exam:</strong></label><br>
+              <input type="text" id="etest_p" name="etest_p" required /><br><br>
+              
+              <label for="mba_p"><strong>Percentage secured in Masters Degree(MBA):</strong></label><br>
+              <input type="text" id="mba_p" name="mba_p" required /><br><br>
+              
+              <input type="submit" value="Submit" class = "link-button">
+              
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </form>
+{% endblock content %}
